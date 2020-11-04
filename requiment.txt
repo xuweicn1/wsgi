@@ -1,0 +1,27 @@
+flask
+gevent
+gunicorn
+python-dotenv
+aiohttp
+requests
+
+
+
+
+gunicorn -k gevent code:application
+
+
+gunicorn -k gevent pywsgi:application
+
+
+
+
+pip install gevent -i https://pypi.tuna.tsinghua.edu.cn/simple 
+
+
+gunicorn patched:app -b 0.0.0.0:5000 -w 2 -k gevent
+
+
+gunicorn --bind 127.0.0.1:9000 --workers 1 --worker-class gevent wsgiapp:application
+
+gunicorn --bind 127.0.0.1:5000 --workers 1 --worker-class gevent patched:app

@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pyenv
+.python-version
+
+__pypackages__/
+
+# Pyre type checker
+.pyre/
+doc/
+test/
+test*
+venv/
+env/
+instance/
+.webassets-cache
